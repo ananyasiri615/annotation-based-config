@@ -1,4 +1,4 @@
-package com.ars;
+package com.ars.autowired;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,12 +10,16 @@ import org.springframework.context.annotation.Configuration;
 
         @Bean(name = "emp")
         Employee getEmployee() {
-            return new Employee(11,"Sam",28,true);
+            return new Employee(11,"Sam",28,true," ");
         }
 
+        @Bean(name = "add")
+        Address getAddress() {
+            return new Address("Street No 1","London");
+        }
         @Bean(name = "emp1")
         Employee getEmployeeOne() {
-            return new Employee(10,"Joe",25,true);
+            return new Employee(10,"Joe",25,true," ");
         }
 
     }
