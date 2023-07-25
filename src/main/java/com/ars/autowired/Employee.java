@@ -3,6 +3,7 @@ package com.ars.autowired;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Employee {
+
     private int id;
     private String name;
     private int age;
@@ -51,28 +52,20 @@ public class Employee {
         this.add = add;
     }
 
-    public Employee(int id, String name, int age, boolean contract, Address add) {
+    public Employee(int id, String name, int age, boolean contract) {
         super();
         this.id = id;
         this.name = name;
         this.age = age;
         this.contract = contract;
-        this.add = add;
     }
 
     public Employee() {
         super();
-        // TODO Auto-generated constructor stub
     }
-
     @Override
     public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", contract=" + contract +
-                ", add=" + add +
-                '}';
+        return "Employee [id=" + id + ", name=" + name + ", age=" + age + ", contract=" + contract + ", add=" + add
+                + "]";
     }
 }
